@@ -1,0 +1,342 @@
+{
+  "Codes": {
+    "SPheno": {
+      "Command": "",
+      "InputFile": "",
+      "OutputFile": "",
+      "Observables": {
+        "mh": {
+          "SLHA": [
+            "MASS",
+            [
+              25
+            ]
+          ],
+          "SCALING": "GAUSS",
+          "MEAN": 125.09,
+          "VARIANCE": 3.0
+        }
+      },
+      "Run": "True"
+    },
+    "FlexibleSUSY": {
+      "Command": "",
+      "InputFile": "",
+      "OutputFile": "",
+      "Observables": {
+        "mhFS": {
+          "SLHA": [
+            "MASS",
+            [
+              25
+            ]
+          ],
+          "SCALING": "GAUSS",
+          "MEAN": 125.09,
+          "VARIANCE": 3.0
+        }
+      },
+      "Run": "True"
+    },
+    "HiggsSignals": {
+      "Command": "",
+      "Options": "",
+      "OutputFile": "HiggsBounds_results.dat",
+      "Neutral Higgs": [],
+      "Charged Higgs": [],
+      "Observables": {
+        "HSpval": {
+          "SLHA": [
+            "HIGGSSIGNALS",
+            [
+              101
+            ]
+          ]
+        }
+      },
+      "Run": "True"
+    },
+    "HiggsBounds": {
+      "Command": "",
+      "Options": "",
+      "OutputFile": "HiggsBounds_results.dat",
+      "Neutral Higgs": [],
+      "Charged Higgs": [],
+      "Observables": {
+        "HBRatio": {
+          "SLHA": [
+            "HIGGSBOUNDS",
+            [
+              101
+            ]
+          ]
+        }
+      },
+      "Run": "True"
+    },
+    "HiggsTools": {
+      "HiggsBounds Dataset": "",
+      "HiggsSignals Dataset": "",
+      "Neutral Higgs": [],
+      "Charged Higgs": [],
+      "Observables": {
+        "HBobsr": {
+          "SLHA": [
+            "HIGGSTOOLS",
+            [
+              2
+            ]
+          ],
+          "SCALING": "UPPER",
+          "MEAN": 1.0,
+          "VARIANCE": 0.1
+        },
+        "HSpval": {
+          "SLHA": [
+            "HIGGSTOOLS",
+            [
+              13
+            ]
+          ],
+          "SCALING": "USER"
+        }
+      },
+      "Run": "True"
+    },
+    "VevaciousPlusPlus": {
+      "Command": "",
+      "Initialization File": "",
+      "Observables": {
+        "Vstab": {
+          "SLHA": [
+            "VEVACIOUSSTABILITY",
+            [
+              1
+            ]
+          ]
+        }
+      },
+      "Run": "True"
+    },
+    "MicrOmegas": {
+      "Command": "",
+      "InputFile": "",
+      "OutputFile": "omg.out",
+      "Cross-sections": "True",
+      "Run": "True",
+      "LSP": [
+        1000022
+      ],
+      "Observables": {
+        "Oh2": {
+          "SLHA": [
+            "DARKMATTER",
+            [
+              1
+            ]
+          ],
+          "SCALING": "GAUSS",
+          "MEAN": 0.112,
+          "VARIANCE": 0.1
+        },
+        "CDM1": {
+          "SLHA": [
+            "DARKMATTER",
+            [
+              2
+            ]
+          ],
+          "SCALING": "OFF"
+        },
+        "DMpval": {
+          "SLHA": [
+            "DARKMATTER",
+            [
+              401
+            ]
+          ],
+          "SCALING": "OFF"
+        }
+      },
+      "DD_Limits": "False"
+    },
+    "flavio": {
+      "InputFile": "",
+      "Observables": {},
+      "Run": "False"
+    },
+    "ZPEED": {
+      "Path": "",
+      "Run": "False",
+      "Observables": {
+        "loglike": {
+          "SLHA": [
+            "ZPEED",
+            [
+              1
+            ]
+          ],
+          "SCALING": "MINUSEXPUSER"
+        },
+        "CLs": {
+          "SLHA": [
+            "ZPEED",
+            [
+              3
+            ]
+          ],
+          "SCALING": "OFF",
+          "MEAN": 0.05,
+          "VARIANCE": 0.01
+        }
+      }
+    },
+    "Zprime": {
+      "PDGs": [
+        31
+      ],
+      "Observables": {
+        "zplim": {
+          "SLHA": [
+            "ZPRIME",
+            [
+              1
+            ]
+          ],
+          "SCALING": "OFF"
+        }
+      },
+      "Run": "False"
+    },
+    "SModelS": {
+      "Path": "",
+      "Cache": "",
+      "QNUMBERS file": "",
+      "Parameter file": "",
+      "Observables": {
+        "SModelSr": {
+          "SLHA": [
+            "SMODELS",
+            [
+              1
+            ]
+          ]
+        },
+        "SModelSrm1": {
+          "SLHA": [
+            "SMODELS",
+            [
+              2
+            ]
+          ]
+        }
+      },
+      "Run": "False"
+    },
+    "HackAnalysis_LO": {
+      "Command": "",
+      "YAML file": "",
+      "Config file": "",
+      "Efficiency Filename": "",
+      "Cutflow Filename": "",
+      "Histogram Filename": "",
+      "Run": "False"
+    },
+    "MadGraphHackAnalysis": {
+      "HackAnalysis": "",
+      "MadGraph": "",
+      "Process": "",
+      "YAML file": "",
+      "Config file": "",
+      "Efficiency Filename": "",
+      "Cutflow Filename": "",
+      "Histogram Filename": "",
+      "Observables": {
+        "xs": {
+          "SLHA": [
+            "MADGRAPH",
+            [
+              1
+            ]
+          ]
+        }
+      },
+      "Run": "False"
+    }
+  },
+  "Setup": {
+    "RunName": "",
+    "Type": "",
+    "Cores": 1,
+    "StoreEverything": "False",
+    "StoreAllPoints": "True",
+    "Store In Memory": "False",
+    "Store Invalid": "False",
+    "StoreSeparateFiles": "False",
+    "Store Inputs": "False",
+    "csv": "True",
+    "Merge Results": "True",
+    "Precision": 8,
+    "Spectrum File": "",
+    "OutputFile": "SLHA_output",
+    "DiverLib": "",
+    "MultiNestLib": "",
+    "LR": 0.01,
+    "Neurons": [
+      50,
+      50,
+      50
+    ],
+    "Points": 10,
+    "Iterations": 30,
+    "Classifier": "True",
+    "LogLike": "True"
+  },
+  "Variables": {},
+  "Observables": {},
+  "Plotting": {
+    "Strategy": "csv",
+    "Plots": {
+      "m0_vs_mh": {
+        "Labels": [
+          "$m_0$ (GeV)",
+          "$m_{h}$ (GeV)"
+        ],
+        "Values": [
+          "m0",
+          "mh"
+        ],
+        "Ranges": [
+          [
+            200,
+            3500
+          ],
+          [
+            118,
+            128
+          ]
+        ]
+      },
+      "m0_vs_m12": {
+        "Labels": [
+          "$m_0$ (GeV)",
+          "$m_{12}$ (GeV)"
+        ],
+        "Values": [
+          "m0",
+          "m12"
+        ],
+        "Ranges": [
+          [
+            200,
+            3500
+          ],
+          [
+            200,
+            3500
+          ]
+        ]
+      }
+    }
+  }
+}
