@@ -6,7 +6,7 @@ Requires `pip install cmaes`, see:
 https://github.com/CyberAgentAILab/cmaes
 
 
-BSMArt scan written by ....
+BSMArt scan to be describe in an upcoming publication.
 
 
 

@@ -1,8 +1,7 @@
 """
 --------------------------------------------------------------------------------------------------
 HEPRun class for handling running and IO with HEP tools.
-
-Written by Mark Goodsell
+--------------------------------------------------------------------------------------------------
 
 Part of BSMArt, but it is self-contained (nb requires zslha and the classes for the different tools)
 and you can import it into your own programs
@@ -51,7 +50,7 @@ Other blocks:
     - Fitting: Dictionary for fitting inputs.
     - MPI: Dictionary containing MPI settings (Size, Rank).
 
---------------------------------------------------------------------------------------------------
+
 """
 # For use with traceback.print_exc() in debugging:
 #import traceback

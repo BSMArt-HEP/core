@@ -25,7 +25,7 @@ extensions = [  'myst_parser',
                 'sphinx.ext.autosummary']
 
 autosummary_generate = True
-autodoc_mock_imports = ["torch","cmaes","deap","evosax","imblearn","jax","skimage","pyod","yaml","Higgs","anyBSM","flavio","wilson","pandas","sklearn"]
+autodoc_mock_imports = ["torch","cmaes","deap","evosax","imblearn","jax","skimage","pyod","yaml","Higgs","anyBSM","flavio","wilson","pandas","sklearn","mpi4py","psutil","tqdm","rich","numpy","scipy","matplotlib","emcee","wget","requests","seaborn","corner","six","vegas"]
 
 templates_path = ['_templates']
 exclude_patterns = []

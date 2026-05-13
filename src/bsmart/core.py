@@ -1,9 +1,9 @@
 """ 
 ----------------------------------------------------------
  BSMArt Core module to define the basic Scan class
-
- All scans inherit the basic features here.
 ----------------------------------------------------------
+ All scans inherit the basic features here.
+
 
 Useful settings:
 	'StoreEverything': will store all output from all codes in separate directories in All_Outputs

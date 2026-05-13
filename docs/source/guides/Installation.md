@@ -11,6 +11,9 @@ python3 -m venv BSMArt_venv
 source BSMArt_venv/bin/activate
 pip install bsmart
 ```
+After installation, some shells (e.g. `tsch`) require the `rehash` command to update paths and find the new `BSMArt` executable. 
+
+If installing as a user without a virtual environment, you may need to use the `--user` flag with `pip`, e.g.: `pip install --user bsmart`.
 
 Many scans/tools require additional packages to be installed. To install as complete a list as possible, you can use:
 
@@ -83,14 +86,14 @@ This will create a directory `BSMArt_QuickStart` with two example scans, `QuickS
 
 ```bash
 cd BSMArt_QuickStart
-BSMArt QuickStart.json
+BSMArt QuickStart_MSSM.json
 ```
 
 or
 
 ```bash
 cd BSMArt_QuickStart
-BSMArt Lightning.json
+BSMArt Lightning_MSSM.json
 ```
 
 In case of problems, it is recommended to use the `--debug` flag to see warning messages; otherwise, the logs will be stored on either `/dev/shm/BSMArt_Temp` (if `/dev/shm` exists) or in subdirectory `Temp`.
@@ -99,13 +102,24 @@ In case of problems, it is recommended to use the `--debug` flag to see warning 
 Example scans
 -------------
 
-There are many example scans available included in the package. A subset of these are buildable so that you can run them directly on your system: you can do this via
+There are several example scans available included in the package. A subset of these are buildable so that you can run them directly on your system: you can do this via
 
 ```bash
 BSMArt-BuildExamples
 ```
 
 This will launch `SARAH` to build code for several different models, and create several scan directories containing scans over them. It will also create some examples with toy tools (not requiring `SPheno`). 
+
+Community examples on github
+----------------------------
+
+To share scans, tools and example `json` files, we created a new github repository:
+
+[https://github.com/BSMArt-HEP/examples](github.com/BSMArt-HEP/examples)
+
+Instructions can be found there about downloading and using them for your own scans. 
+
+We strongly encourage you to contribute by adding your own scans, tools and example `json` files to this repository via a pull request!
 
 
 Setting up your own scan
@@ -114,7 +128,7 @@ Setting up your own scan
 If you need to run `SARAH` for your model to generate the different codes, the `BSMArt-PrepareModel` script can be used. It will prepare the model using SARAH and configure it for all the included codes:
 
 ```bash
-BSMArt-PrepareModel --All
+BSMArt-PrepareModel --All <modelname>
 ```
 
 Alternatively, only a subset of codes can be configured by using different flags. 
@@ -122,7 +136,7 @@ Alternatively, only a subset of codes can be configured by using different flags
 This script will generate the code, compile the necessary outputs, and create a `BSMArt_modelname` directory with the necessary files to run scans, including an empty template `json` file and a template input file for SPheno, if required. Once you have configured the scan (according to the type of scan, tools desired, parameters to scan over, plots to make, etc) you can launch it with:
 
 ```bash
-cd <BSMArt_modelname>
+cd BSMArt_<modelname>
 BSMArt <template>.json
 ```
 

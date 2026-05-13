@@ -105,7 +105,8 @@ def getnewcandidates(GP,ndim=2,npoints=100,multiplier=6):
     return allpoints[np.argsort(allyfuncs)[:npoints]]
     #return allpoints[np.argsort(allyfuncs)[-npoints:]]
 
-def getgrids(GP,ndim=2,npoints=50,thresholds=[-np.inf,0.0,np.inf]):
+# wrap -inf in float for the documentation 
+def getgrids(GP,ndim=2,npoints=50,thresholds=[float('-inf'),0.0,float('inf')]):
     """
         get grids via shooting algorithm according to p(c | z)
     """

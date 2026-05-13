@@ -12,6 +12,8 @@ They include:
 * :doc:`read_dir <../api/generated/bsmart.scans.read_dir>`, reads input files from a directory and runs tools. Useful especially for collider studies where e.g. the input files are spectrum files.
 * :doc:`read_dir_mpi <../api/generated/bsmart.scans.read_dir_mpi>`, MPI version of the above, so can therefore be run over several nodes.
 * :doc:`AL <../api/generated/bsmart.scans.AL>`, an active learning scan, described in the paper `Active Learning <https://arxiv.org/abs/2204.13950>`_.
+* :doc:`CMAES <../api/generated/bsmart.scans.CMAES>`, a highly-efficient optimisation algorithm.
+* :doc:`CMAES_ND <../api/generated/bsmart.scans.CMAES_ND>`, optimisation with novelty detection.
 * :doc:`Contour2D <../api/generated/bsmart.scans.Contour2D>`, a scan for finding points along a contour in two dimensions.
 * :doc:`ContourGP <../api/generated/bsmart.scans.ContourGP>`, adapted from `excursion <https://github.com/diana-hep/excursion>`_ by Heinrich, Louppe and Cranmer, requires sklearn. Similar in aim to Contour2D, except it uses Gaussian Processes to find a contour (e.g. an exclusion curve).
 * :doc:`MultiNest <../api/generated/bsmart.scans.MultiNest>`, uses `MultiNest <https://github.com/farhanferoz/MultiNest>`_. Parallelisation through MPI.
