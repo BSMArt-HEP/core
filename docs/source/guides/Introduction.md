@@ -11,11 +11,11 @@ For a list of tools, see {doc}`Tools`
 
 Online documentation is found at [bsmart-hep.github.io/core/](https://bsmart-hep.github.io/core/)
 
-The code for version 2 and later can be perused at [gitlab.com/bsmart-hep/core](https://gitlab.com/bsmart-hep/core) 
+The code for version 2 and later can be perused at [github.com/bsmart-hep/core](https://github.com/bsmart-hep/core) 
 while all code can be downloaded from [goodsell.pages.in2p3.fr/bsmart/](https://goodsell.pages.in2p3.fr/bsmart/).
 
 
-The community examples repository can be found at [gitlab.com/bsmart-hep/examples](https://gitlab.com/bsmart-hep/examples)
+The community examples repository can be found at [github.com/bsmart-hep/examples](https://github.com/bsmart-hep/examples)
 
 
 Credits
