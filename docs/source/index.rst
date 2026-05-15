@@ -27,6 +27,7 @@ For a list of tools, see :doc:`guides/Tools`
    guides/Installation
    guides/scans
    guides/Tools
+   guides/JsonReference
    guides/WritingAScan
    guides/WritingATool
    
