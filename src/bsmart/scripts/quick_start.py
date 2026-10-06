@@ -63,11 +63,7 @@ def main():
     # command=command + ' --SkipFlavorKit --Options="IncludeLoopDecays->False" MSSM' 
 
     # We call prepare_model.main() via simulating args
-    # But wait, prepare_model.main() parses args from sys.argv?
-    # No, it uses argparse without arguments, so it reads sys.argv.
-    # We should hack sys.argv or refactor prepare_model to accept args.
-    # Refactoring prepare_model to accept args is cleaner, but I already wrote it.
-    # I can mock sys.argv.
+    
     
     # But we need to handle quoting of Options properly if passing via sys.argv manually
     # argparse handles quoting from shell. Here I am constructing the list directly.

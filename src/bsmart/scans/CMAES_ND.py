@@ -5,10 +5,15 @@ Optimisation using CMAES with Novelty Detection
 Requires `pip install cmaes`, see:
 https://github.com/CyberAgentAILab/cmaes
 
+You can find more information about this type of scan in:
 
-BSMArt scan to be describe in an upcoming publication.
+Fernando Abreu de Souza, Miguel Crispim Romão, Nuno Filipe Castro, Mehraveh Nikjoo, Werner Porod: "Exploring parameter spaces with artificial intelligence and machine learning black-box optimization algorithms", arXiv:2206.09223, https://arxiv.org/abs/2206.09223, Jun 2022
 
+Jorge Crispim Romão, Miguel Crispim Romão: "Combining evolutionary strategies and novelty detection to go beyond the alignment limit of the Z3 3HDM", arXiv:2402.07661, https://arxiv.org/abs/2402.07661, Feb 2024
 
+Fernando Abreu de Souza, Miguel Crispim Romão, Nuno Filipe Castro, Werner Porod: Exploring scotogenic parameter spaces and mapping uncharted dark matter phenomenology with multi-objective search algorithms", arXiv:2505.08862, https://arxiv.org/abs/2505.08862, May 2025
+
+Please cite these papers if you are using this scan.
 
 This scan uses cmaes to optimise a log-likelihood constructed from selected observables.
 
@@ -164,20 +169,48 @@ class NewScan(Scan):
         )
         self.runsettings.store_invalid_points = True  # Need this to keep points where
         self.runsettings.invalid_return_value = 0
-        self.citations = """@article{deSouza:2025uxb,
-    author = "de Souza, Fernando Abreu and Castro, Nuno Filipe and Crispim Rom{\\~a}o, Miguel and Porod, Werner",
-    title = "{Exploring scotogenic parameter spaces and mapping uncharted dark matter phenomenology with multi-objective search algorithms}",
-    eprint = "2505.08862",
-    archivePrefix = "arXiv",
-    primaryClass = "hep-ph",
-    reportNumber = "IPPP/25/29",
-    doi = "10.1007/JHEP10(2025)116",
-    journal = "JHEP",
-    volume = "10",
-    pages = "116",
-    year = "2025"
-}
-"""
+        self.citations = """
+            @article{deSouza:2022uhk,
+            author = "de Souza, Fernando Abreu and Crispim Rom{\~a}o, Miguel and Castro, Nuno Filipe and Nikjoo, Mehraveh and Porod, Werner",
+            title = "{Exploring parameter spaces with artificial intelligence and machine learning black-box optimization algorithms}",
+            eprint = "2206.09223",
+            archivePrefix = "arXiv",
+            primaryClass = "hep-ph",
+            doi = "10.1103/PhysRevD.107.035004",
+            journal = "Phys. Rev. D",
+            volume = "107",
+            number = "3",
+            pages = "035004",
+            year = "2023"
+        }
+        @article{Romao:2024gjx,
+            author = "Rom{\~a}o, Jorge Crispim and Crispim Rom{\~a}o, Miguel",
+            title = "{Combining evolutionary strategies and novelty detection to go beyond the alignment limit of the Z3 3HDM}",
+            eprint = "2402.07661",
+            archivePrefix = "arXiv",
+            primaryClass = "hep-ph",
+            reportNumber = "IPPP/24/04, CFTP/24-002",
+            doi = "10.1103/PhysRevD.109.095040",
+            journal = "Phys. Rev. D",
+            volume = "109",
+            number = "9",
+            pages = "095040",
+            year = "2024"
+        }
+            @article{deSouza:2025uxb,
+            author = "de Souza, Fernando Abreu and Castro, Nuno Filipe and Crispim Rom{\\~a}o, Miguel and Porod, Werner",
+            title = "{Exploring scotogenic parameter spaces and mapping uncharted dark matter phenomenology with multi-objective search algorithms}",
+            eprint = "2505.08862",
+            archivePrefix = "arXiv",
+            primaryClass = "hep-ph",
+            reportNumber = "IPPP/25/29",
+            doi = "10.1007/JHEP10(2025)116",
+            journal = "JHEP",
+            volume = "10",
+            pages = "116",
+            year = "2025"
+        }
+        """
 
     def __init__(self, inputs, log):
         Scan.__init__(self, inputs, log)

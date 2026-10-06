@@ -600,17 +600,13 @@ def makeBSMArtTemplates(modelname,bsmart_dict,paths_dict,includecodes):
             # Check package resources
             try:
                 import importlib.resources
-                # Assume AuxFiles were moved to bsmart.data.AuxFiles or bsmart.data?
-                # I moved AuxFiles to src/bsmart/data. So the file is at bsmart.data.BSMArt_basetemplate.json (if I flat moved it?)
-                # Wait, I did `git mv AuxFiles src/bsmart/data/`. So it is `src/bsmart/data/AuxFiles/BSMArt_basetemplate.json`.
-                # So resource is `bsmart.data.AuxFiles`
+                
+                # Resource is `bsmart.data.AuxFiles`
                 # Python < 3.9 resources might be tricky with subdirectories.
-                # Let's try files() interface.
+                # Use files() interface.
                 from importlib.resources import files
                 template_path = files('bsmart.data').joinpath('AuxFiles', jsonbasefile)
                 if not template_path.is_file():
-                     # Maybe I moved it differently?
-                     # I did `git mv AuxFiles src/bsmart/data/` -> `src/bsmart/data/AuxFiles`
                      pass
             except ImportError:
                  # Fallback for older python?
@@ -652,7 +648,9 @@ def main():
     ## Set up directories
     cwd = os.getcwd()
 
-    
+    model=args.ModelName
+    modelname=str(args.ModelName).replace('/','-')
+    #scriptname=os.path.join(scriptdir,'init'+modelname+'.m')
 
     if args.scriptdir is not None and os.path.isdir(args.scriptdir):
         scriptdir = args.scriptdir
@@ -671,9 +669,7 @@ def main():
     #    scriptdir=cwd
 
 
-    model=args.ModelName
-    modelname=str(args.ModelName).replace('/','-')
-    #scriptname=os.path.join(scriptdir,'init'+modelname+'.m')
+
 
 
     jsonFILE='HEPtoolpaths.json'

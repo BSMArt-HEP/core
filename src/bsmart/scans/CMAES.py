@@ -1,17 +1,22 @@
 """
 Optimisation using CMAES
 
-
+Requires `pip install cmaes`, see:
 https://github.com/CyberAgentAILab/cmaes
+
+You can find more information about this type of scan in:
+
+Fernando Abreu de Souza, Miguel Crispim Romão, Nuno Filipe Castro, Mehraveh Nikjoo, Werner Porod: "Exploring parameter spaces with artificial intelligence and machine learning black-box optimization algorithms", arXiv:2206.09223, https://arxiv.org/abs/2206.09223, Jun 2022
+
+Vasileios Basiouris, Miguel Crispim Romão, Stephen F. King, George K. Leontaris: "Modular family symmetry in fluxed GUTs", arXiv:2407.06618, https://arxiv.org/abs/2407.06618, Jul 2024
+
+Please cite these papers if you are using this scan.
+
+
+
 
 
 BSMArt scan written by M. Goodsell
-
-
-Requires:
-        
-
-pip3 install cmaes
 
 
 
@@ -71,7 +76,35 @@ class NewScan(Scan):
                 else:
                         self.naive = True  # we treat invalid points as bad
                         self.runsettings.invalid_return_value = []
-
+                self.citations = """
+                    @article{deSouza:2022uhk,
+                    author = "de Souza, Fernando Abreu and Crispim Rom{\~a}o, Miguel and Castro, Nuno Filipe and Nikjoo, Mehraveh and Porod, Werner",
+                    title = "{Exploring parameter spaces with artificial intelligence and machine learning black-box optimization algorithms}",
+                    eprint = "2206.09223",
+                    archivePrefix = "arXiv",
+                    primaryClass = "hep-ph",
+                    doi = "10.1103/PhysRevD.107.035004",
+                    journal = "Phys. Rev. D",
+                    volume = "107",
+                    number = "3",
+                    pages = "035004",
+                    year = "2023"
+                }
+                @article{Basiouris:2024qfe,
+                    author = "Basiouris, Vasileios and Crispim Rom{\~a}o, Miguel and King, Stephen F. and Leontaris, George K.",
+                    title = "{Modular family symmetry in fluxed GUTs}",
+                    eprint = "2407.06618",
+                    archivePrefix = "arXiv",
+                    primaryClass = "hep-ph",
+                    reportNumber = "IPPP/24/42",
+                    doi = "10.1103/PhysRevD.111.015012",
+                    journal = "Phys. Rev. D",
+                    volume = "111",
+                    number = "1",
+                    pages = "015012",
+                    year = "2025"
+                }
+                """
 
         def __init__(self, inputs, log):
                 Scan.__init__(self, inputs, log)
